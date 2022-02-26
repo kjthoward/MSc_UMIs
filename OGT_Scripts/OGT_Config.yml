@@ -1,0 +1,65 @@
+#####################################################
+# ONLY NEEDED THIS BLOCK IF SEQUENCING DONE LOCALLY #
+#####################################################
+
+# Full path to the basecalls directory
+basecalls: '/mnt/d/OGT_Data/OxfordData_3_sample_MiSeq_2021-08-24/Intensities/BaseCalls'
+
+# Full path to the Barcodes.txt file
+barcodes: 'barcodes.txt'
+
+# full path of where you want barcodes data to be stored
+barcodesdir: '/mnt/d/OGT_Data/OxfordData_3_sample_MiSeq_2021-08-24/bcl_output'
+
+# Read structure - used in extract_umis.py
+# B=Sample Barcode, M=UMI, S=Skip T=Template
+#Following is an example from a 2x150 run
+read-structure: '150T8B9M8B150T'
+
+# run name, the name of the run, will be stored in BAM but is not important
+runname: '210824_M01913_JP5WH'
+
+# Full Path to library parameters file 
+libparams: 'library_params.txt'
+
+##############################################
+# REST ARE USED FOR ALL SEQUENCING LOCATIONS #
+##############################################
+
+# Number of threads to use for various processes
+threads: 8
+
+# Full path for the reference FASTA file
+reference: '/mnt/d/DATA_FILES/hg38/Homo_sapiens_assembly38.fasta'
+
+# UMI grouping strategy
+# valid options are 'paired', 'edit', 'adjacency' or 'identity'
+# https://fulcrumgenomics.github.io/fgbio/tools/latest/GroupReadsByUmi.html
+grouping: 'adjacency'
+
+# Edits for UMI grouping (any int >= 0) 
+# Edits = number of bases that a UMI differ by to count as same UMI
+edits: 1
+
+# Min reads to UMI collapsing
+min_reads: 3
+
+# Full Path to BED file 
+bed: '/mnt/d/DATA_FILES/small_discovery_panel_MM_19102020.bed'
+
+# Full Path to Interval list file
+intervals: '/mnt/d/DATA_FILES/small_discovery_panel_MM_19102020.interval_list'
+
+
+# Min VAF for VarDict to call
+# Decimal, e.g. 1% VAF = 0.01, 0.01% = 0.0001
+VAF: '0.0001'
+
+# Min Alt reads for VarDict
+alt_reads: 2
+
+# Full Path to annovar folder 
+annovar: '/home/kjthoward/annovar/table_annovar.pl'
+
+# Full Path to humandb folder for annovar
+humandb: '/mnt/d/DATA_FILES/humandb'

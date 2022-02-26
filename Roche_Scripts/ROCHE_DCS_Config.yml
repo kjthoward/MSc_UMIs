@@ -1,0 +1,40 @@
+# Read structure - used in extract_umis.py
+# B=Sample Barcode, M=UMI, S=Skip T=Template
+read-structure: '3M3S+T 3M3S+T'
+
+# Number of threads to use for various processes
+threads: 8
+
+# Full path for the reference FASTA file
+reference: '/mnt/d/DATA_FILES/hg38/Homo_sapiens_assembly38.fasta'
+
+# UMI grouping strategy
+# valid options are 'paired', 'edit', 'adjacency' or 'identity'
+# https://fulcrumgenomics.github.io/fgbio/tools/latest/GroupReadsByUmi.html
+grouping: 'paired'
+
+# Edits for UMI grouping (any int >= 0) 
+# Edits = number of bases that a UMI differ by to count as same UMI
+edits: 0
+
+# Min reads to UMI collapsing
+min_reads: 2
+
+# Full Path to BED file 
+bed: '/mnt/d/DATA_FILES/small_discovery_panel_MM_19102020.bed'
+
+# Hull Path to Interval list file
+intervals: '/mnt/d/DATA_FILES/small_discovery_panel_MM_19102020.interval_list'
+
+# Min VAF for VarDict to call
+# Decimal, e.g. 1% VAF = 0.01, 0.01% = 0.0001
+VAF: '0.0001'
+
+# Min Alt reads for VarDict
+alt_reads: 2
+
+# Full Path to annovar folder 
+annovar: '/home/kjthoward/annovar/table_annovar.pl'
+
+# Full Path to humandb folder for annovar
+humandb: '/mnt/d/DATA_FILES/humandb'
