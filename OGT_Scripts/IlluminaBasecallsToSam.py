@@ -5,7 +5,6 @@ print(__file__)
 
 config = yaml.safe_load(open("OGT_Config.yml"))
 basecalls = config["basecalls"]
-barcodes = config["barcodes"]
 structure = config["read-structure"]
 barcodesdir = config["barcodesdir"]
 runname = config["runname"]
