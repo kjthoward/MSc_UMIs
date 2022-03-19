@@ -63,7 +63,7 @@ Contains scripts used to analyse UMI data from Integrated DNA Technologies (IDT)
 
 ## OGT_Scripts
 Contains scripts used to analyse UMI data from Oxford Gene Technologies (OGT).
-- ExtractIlluminaBarcodes.py
+- ExtractIlluminaBarcodes.py 
   - NOTE: This script is only required if sequencing was performed locally, if OGT provided unmapped BAMs then proceed to clean_sam.py or align_reads.py
   - Determines the numbers of reads containing barcode-matching sequences
   - Requires the BaseCalls directory to be specified from the "basecalls" parameter from OGT_Config.yml
@@ -125,7 +125,7 @@ Contains scripts used to analyse UMI data from Oxford Gene Technologies (OGT).
   - Requires reference files, from the "humandb" parameter from OGT_Config.yml
   - Requires the path to the table_annovar.pl script, from the "annovar" parameter from OGT_Config.yml
 
-  ## Roche_Scripts
+## Roche_Scripts
   Contains scripts used to analyse UMI data from Roche.
   - create_ubams.py
     - Used to create unmapped BAMs from fastq.gz files
